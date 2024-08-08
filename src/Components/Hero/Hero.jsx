@@ -6,7 +6,7 @@ import {motion} from 'framer-motion'
 
 const Hero = () => {
   return (
-    <section className="hero-wrapper">
+    <section className="hero-wrapper" >
       <div className="paddings innerwidth flexCenter hero-container ">
         <div className="flexColStart hero-left">
           <div className="hero-title">

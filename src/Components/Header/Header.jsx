@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { BiMenuAltRight, BiX } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
+import { BiMenuAltRight, BiX } from 'react-icons/bi'; // Import BiX for the close icon
 import './Header.css';
 
 const Header = () => {
@@ -15,19 +14,19 @@ const Header = () => {
             <div className="flexCenter innerWidth paddings h-container">
                 <img src="./logo.png" alt="logo" width={100} />
                 <div className={`flexCenter h-menu ${menuOpen ? 'open' : ''}`}>
-                    <Link to="/residencies">Residencies</Link>
-                    <Link to="/value">Our Value</Link>
-                    <Link to="/contacts">Contact Us</Link>
-                    <Link to="/get-started">Get Started</Link>
+                    <a href="#resi">Residencies</a>
+                    <a href="#value-section">Our Value</a>
+                    <a href="#contact-section">Contact Us</a>
+                    <a href="#get-started">Get Started</a>
                     <button className='button'>
-                        <Link to="/contact">Contact</Link>
+                        <a href="#contact-section">Contact</a>
                     </button>
                 </div>
-                <div className="menu-icon" onClick={toggleMenu} aria-label="Toggle menu">
+                <div className="menu-icon" onClick={toggleMenu}>
                     {menuOpen ? (
-                        <BiX size={30} style={{ color: "white" }} aria-hidden="true" />
+                        <BiX size={30} style={{ color: "white" }} /> 
                     ) : (
-                        <BiMenuAltRight size={30} style={{ color: "white" }} aria-hidden="true" />
+                        <BiMenuAltRight size={30} style={{ color: "white" }} /> // Show menu icon when closed
                     )}
                 </div>
             </div>
